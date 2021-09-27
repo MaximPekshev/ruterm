@@ -1,0 +1,158 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Контакты | RUTERM
+{% endblock %}
+
+{% block description %}
+308519, Белгородская область, Белгородский район, пгт. Северный,  ул. Березовая, зд. 5а
+{% endblock %}
+
+{% block header %}
+<section>
+	<div class="parallax-bg constr-page-image-parallax constr-page-overlay" data-parallax="scroll" data-image-src="{% static 'images/main_background.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h1 class="constr-p-t">Контакты</h1>
+					<div class="constr-under-line-2"></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section id="serv" class="section-top res-branch constr-bg-color services">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-sm-4">
+				<div class="single-service">
+
+
+					<div class="icon-container">
+						<div class="icon hvr-ripple-out">
+							<i class="icon-compass"></i>
+						</div>
+					</div>
+
+
+
+					<h5 class="section-title">Адрес</h5>
+					<p>
+						<b>308519, Белгородская область,<br> Белгородский район, пгт. Северный,<br> ул. Березовая, зд. 5а</b>
+					</p>
+
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="single-service">
+
+					<div class="icon-container">
+						<div class="icon hvr-ripple-out">
+							<i class="icon-mic"></i>
+						</div>
+					</div>
+
+					<h5 class="section-title">Телефоны</h5>
+					<p>
+						<b>комерческий отдел <a href="tel:+74722204074">+7(4722)20-40-74</a><br>
+						отдел закупок <a href="tel:+74722204075">+7(4722)20-40-75</a><br>
+						отдел кадров <a href="tel:+74722204071">+7(4722)20-40-71</a>
+						</b>
+					</p>
+
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="single-service">
+
+					<div class="icon-container">
+						<div class="icon hvr-ripple-out">
+							<i class="icon-alarmclock"></i>
+						</div>
+					</div>
+
+					<h5 class="section-title">Рабочее время</h5>
+
+					<p>
+						<b>
+							09:00 - 18:00 [ПН-ПТ]<br>
+							09:00 - 17:00 [СБ]<br>
+							ВЫХОДНОЙ [ВС]
+						</b>
+					</p>
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+</section>
+<section class="section-top contact">
+	<div class="container ">
+		<div class="section-header-2 wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+			<div class="section-description">
+				Свяжитесь с нами
+			</div>
+			<div class="under-line-1"></div>
+		</div>
+		<div class="contact-box">
+
+			<div class="row">
+
+				<div class="col-md-12">
+
+					<form class="contact-form" method="POST" action="">
+						{% csrf_token %}
+						<h4 class="success">
+							<i class="icon_check"></i> Ваше сообщение успешно отправлено
+						</h4>
+
+						<h4 class="error">
+							<i class="icon_error-circle"></i> Please enter a valid email and message must be longer than 1 character.
+						</h4>
+
+						<div class="col-md-6">
+							<input class="form-control input-box" id="name" type="text" name="name" placeholder="Ваше Имя">
+						</div>
+
+						<div class="col-md-6">
+							<input class="form-control input-box" id="email" type="email" name="email" placeholder="Ваш Email">
+						</div>
+
+						<div class="col-md-12">
+							<input class="form-control input-box" id="subject" type="text" name="subject" placeholder="Тема">
+							<textarea class="form-control textarea-box" id="message" rows="8" placeholder="Сообщение"></textarea>
+						</div>
+
+						<button class="btn hvr-bounce-to-right" data-style="expand-left">Отправить</button>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+<div>
+	<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7d53ac19c1dd748e2170f5fddf767e59807a4534eccc208f8231c98cddc75a8a&amp;source=constructor" width="100%" height="547" frameborder="0"></iframe>
+</div>
+
+{% endblock %}

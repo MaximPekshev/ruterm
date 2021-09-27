@@ -1,0 +1,58 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Продукция | RUTERM
+{% endblock %}
+
+{% block description %}
+Радиаторы с боковым подключением | Радиаторы с нижним подключением | RUTERM
+{% endblock %}
+
+{% block header %}
+
+<section>
+	<div class="parallax-bg constr-page-image-parallax constr-page-overlay" data-parallax="scroll" data-image-src="{% static 'images/main_background.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h1 class="constr-p-t">Продукция</h1>
+					<div class="constr-under-line-2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="blog-list">
+	<div class="container">
+		<div class="row blog-list-wrap" style="margin: 0;">
+			{% for category in categories %}
+			<div class="col-md-6 col-sm-12 col-xs-12">
+				<div class="all-blog blog-post">
+					<div class="blog-figure blog-list-fig">
+						<a href="{% url 'show_category' cpu_slug=category.cpu_slug %}"><img src="{{ category.picture.url }}" alt=""></a>
+					</div>
+
+					<div class="blog-description">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+
+								<h2 class="blog-post-title" style="font-size: 1em; text-align: center;"><a href="{% url 'show_category' cpu_slug=category.cpu_slug %}">{{ category.title }}</a></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

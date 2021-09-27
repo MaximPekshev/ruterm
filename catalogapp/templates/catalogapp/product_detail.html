@@ -1,0 +1,422 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+{% if product.meta_name %} {{ product.meta_name }} {% else %}{{ product.title }} | RUTERM {% endif %}
+{% endblock %}
+
+{% block description %}
+{% if product.meta_description %} {{ product.meta_description }} {% else %}{{ product.title }} | RUTERM {% endif %}
+{% endblock %}
+
+{% block header %}
+<section>
+	<div class="parallax-bg constr-page-image-parallax constr-page-overlay" data-parallax="scroll" data-image-src="{% static 'images/main_background.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h1 class="constr-p-t">{{ product.title }}</h1>
+                    <div class="constr-under-line-2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="product-details">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+
+				<div class="post-single">
+					<div class="single-product-img">
+						<img src="{{ product.get_main_image.images.url }}" alt="" style="width: 100%;">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+
+				<section class="normal-tabs">
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a data-toggle="tab" href="#tab-one">Характеристики</a>
+						</li>
+						<li class="">
+							<a data-toggle="tab" href="#tab-two">Описание</a>
+						</li>
+					</ul>
+					<div class="panel-body">
+						<div class="tab-content">
+							<div id="tab-one" class="tab-pane active" style="height:500px; overflow: auto;">
+								<table class="table table-striped table-bordered">
+									<tbody>
+										<tr>
+											<td>ТИП</td>
+											<td>{{ product.good_type }}</td>
+										</tr>
+										<tr>
+											<td>Длина</td>
+											<td>{{ product.good_lenght }} мм (шаг 100 мм)</td>
+										</tr>
+										<tr>
+											<td>Высота</td>
+											<td>{{ product.good_height }} мм</td>
+										</tr>
+										<tr>
+											<td>Глубина</td>
+											<td>{{ product.good_depth }} мм</td>
+										</tr>
+										<tr>
+											<td>Рабочее давление</td>
+											<td>{{ product.operating_pressure }} атм</td>
+										</tr>
+										<tr>
+											<td>Испытательное давление</td>
+											<td>{{ product.test_pressure }} атм</td>
+										</tr>
+										<tr>
+											<td>Максимальная температура теплоносителя</td>
+											<td>{{ product.coolant_temperature }}</td>
+										</tr>
+										<tr>
+											<td>Сертификат соответствия РФ</td>
+											<td>ГОСТ {{ product.rf_certificate }}</td>
+										</tr>
+										<tr>
+											<td>Цвет</td>
+											<td>{{ product.color }} (белый)</td>
+										</tr>
+										<tr>
+											<td>Технология обработки поверхности</td>
+											<td>{{ product.surface_treatment_technology }}</td>
+										</tr>
+										<tr>
+											<td>Гарантия</td>
+											<td>{{ product.guarantee }} лет</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							<div id="tab-two" class="tab-pane" style="height:500px; overflow: auto;">
+								<p class="product-description">{{ product.description|linebreaksbr }}</p>
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+			</div>
+		</div>
+
+
+	</div>
+
+</section> 
+
+<section class="constr-service-2 services" id="services">
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="tab-head">
+             <div class="col-md-3">
+             <nav class=" nav-sidebar">
+                <ul class="nav tabs">
+                  <li class="active"><a href="#tab1" data-toggle="tab">Размеры</a></li>
+                  <li class=""><a href="#tab2" data-toggle="tab">Высота, глубина</a></li>
+                  <li class=""><a href="#tab3" data-toggle="tab">Теплоотдача</a></li>
+                  <li class=""><a href="#tab4" data-toggle="tab">Вес, емкость</a></li>
+                  <li class=""><a href="#tab5" data-toggle="tab">способы подключения</a></li>
+                  <li class=""><a href="#tab6" data-toggle="tab">Монтаж</a></li>
+                </ul>
+            </nav>
+
+             <!-- <img class="constr-srv-img fit-img" src="images/construct/srv-1a.png" alt=""> -->
+
+            </div>
+        <div class="col-md-9 tab-content">
+        	<div class="tab-pane active text-style" id="tab1">
+        		<div class="row">
+        			<div class="constr-srv-details" style="width: 100%;">
+        				<div class="col-md-12">
+        					<div class="facts">
+        						<h4>Размеры</h4>
+        					</div>
+        				</div>
+        				<table class="table table-striped table-bordered">
+        					<thead>
+        						<tr style="background-color: grey;">
+        							<th>Тип</th>
+        							<th>Высота мм</th>
+        							<th>Длины мм</th>
+        							<th>Расстояние между присоединительными патрубками мм</th>
+        						</tr>
+        					</thead>
+        					<tbody align="center">
+        						{% for item in size %}
+        						<tr>
+        							<td>{{ item.0.value }}</td>
+        							<td>{{ item.1.value }}</td>
+        							<td>{{ item.2.value }}</td>
+        							<td>{{ item.3.value }}</td>
+        						</tr>
+        						{% endfor %}
+        					</tbody>
+        				</table>
+        			</div>
+        		</div>
+        	</div>
+
+            <div class="tab-pane  text-style" id="tab2">
+                <div class="row">
+                    <div class="constr-srv-details">
+                        <div class="col-md-12">
+                            <div class="facts">
+
+                                <h4>Высота, глубина</h4>
+
+                            </div>
+                        </div>
+
+                       <div class="row">
+                            <div class="col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/height/tolshhina.jpg' %}" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/height/vysota.jpg' %}" alt="">
+                            </div>
+                            <div class="col-md-offset-2 col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/height/tolshhina_1.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane  text-style" id="tab3">
+                <div class="row">
+                    <div class="constr-srv-details">
+                        <div class="col-md-12">
+                            <div class="facts">
+
+                            <h4>Теплоотдача</h4>
+                            Таблица теплоотдачи всех типоразмеров при ΔТ30, ΔТ50, ΔТ70.
+                            </div>
+                        </div>
+
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="10" style="text-align: center; background-color: grey;">ТИП {{ product.good_type }}</th>
+                                </tr>
+                                {% for item in heat_head %}
+                                <tr>
+                                    <th colspan="2" >{{ item.0.value }}</th>
+                                    <th >{{ item.2.value }}</th>
+                                    <th style="text-align: center;">{{ item.3.value }}</th>
+                                    <th style="text-align: center;">{{ item.4.value }}</th>
+                                    <th style="text-align: center;">{{ item.5.value }}</th>
+                                    <th style="text-align: center;">{{ item.6.value }}</th>
+                                    <th style="text-align: center;">{{ item.7.value }}</th>
+                                </tr>
+                                {% endfor %}
+                                <tr>
+                                    <th>{{ heat_head_1.0.value }}</th>
+                                    <th>{{ heat_head_1.1.value }}</th>
+                                    <th  colspan="6" ></th>
+                                </tr>
+                            </thead>
+                            <tbody align="center">
+                                {% for item in heat_body %}
+                                <tr>
+                                    {% if item.0.value %}<td rowspan="3">{{ item.0.value }}</td>{% endif %}
+                                    <td>{{ item.1.value }}</td>
+                                    <td>{{ item.2.value }}</td>
+                                    <td>{{ item.3.value }}</td>
+                                    <td>{{ item.4.value }}</td>
+                                    <td>{{ item.5.value }}</td>
+                                    <td>{{ item.6.value }}</td>
+                                    <td>{{ item.7.value }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane text-style" id="tab4">
+        		<div class="row">
+        			<div class="constr-srv-details" style="width: 100%;">
+        				<div class="col-md-12">
+        					<div class="facts">
+        						<h4>Вес, емкость</h4>
+                                Все данные приведены на 1 метр длины радиаторов.
+        					</div>
+        				</div>
+        				<table class="table table-striped table-bordered">
+        					<thead>
+        						<tr>
+        							<th colspan="7" style="text-align: center; background-color: grey;">ТИП {{ product.good_type }}</th>
+        						</tr>
+        					</thead>
+        					<tbody align="center">
+        						{% for item in weight %}
+        						<tr>
+        							<td>{{ item.0.value }}</td>
+        							<td>{{ item.1.value }}</td>
+        							<td>{{ item.2.value }}</td>
+        							<td>{{ item.3.value }}</td>
+        							<td>{{ item.4.value }}</td>
+        							<td>{{ item.5.value }}</td>
+        							<td>{{ item.6.value }}</td>
+        						</tr>
+        						{% endfor %}
+        					</tbody>
+        				</table>
+        			</div>
+        		</div>
+        	</div>
+            <div class="tab-pane  text-style" id="tab5">
+                <div class="row">
+                    <div class="constr-srv-details">
+                        <div class="col-md-12">
+                            <div class="facts">
+
+                                <h4>Боковое подключение</h4>
+
+                            </div>
+                        </div>
+
+                       <div class="row">
+                            <div class="col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/connect/1-1.jpg' %}" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/connect/2-1.jpg' %}" alt="">
+                            </div>
+                            <div class="col-md-offset-2 col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/connect/3-2.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="constr-srv-details">
+                        <div class="col-md-12">
+                            <div class="facts">
+
+                                <h4>Нижнее подключение</h4>
+
+                            </div>
+                        </div>
+
+                       <div class="row">
+                            <div class="col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/connect/1-1_niz.jpg' %}" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/connect/2-1_niz.jpg' %}" alt="">
+                            </div>
+                            <div class="col-md-offset-2 col-md-6">
+                                <img class="constr-srv-img-2 fit-img" src="{% static 'images/connect/3-2_niz.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane text-style" id="tab6">
+        		<div class="row">
+        			<div class="constr-srv-details" style="width: 100%;">
+        				<div class="col-md-12">
+        					<div class="facts">
+        						<h4>Монтаж</h4>
+                                <div class="row">
+                                    <div class="col-md-6" style="padding-left: 20px;">
+                                        <p>Позиция средней скобы ТИП 10,21, 22,30,33:</p>
+                                        — для четных длин радиаторов:<br>
+                                        D=L/2  где L — длина радиатора. <br>
+                                        — для нечетных длин радиаторов: <br>
+                                        D=L/2-16,67 где L — длина радиатора.
+                                    </div>
+                                    <div class="col-md-6" style="padding-left: 20px;">
+                                        <p>Позиция средней скобы ТИП 11:</p>
+                                        — для четных длин радиаторов:<br>
+                                        D=L/2-16,67  где L — длина радиатора. <br>
+                                        — для нечетных длин радиаторов: <br>
+                                        D=L/2 где L — длина радиатора.
+                                    </div>
+                                </div>    
+        					</div>
+        				</div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="constr-srv-img-2 fit-img" src="{% static 'images/mount/front.jpg' %}" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="constr-srv-img-2 fit-img" src="{% static 'images/mount/back.jpg' %}" alt="">
+                                </div>
+                            </div>
+                        </div> 
+        				<table class="table table-striped table-bordered">
+        					<thead>
+        						<tr>
+        							<th colspan="4" style="text-align: center; background-color: grey;">ТИП {{ product.good_type }}</th>
+        						</tr>
+        					</thead>
+        					<tbody align="center">
+        						{% for item in mounting %}
+        						<tr>
+        							<td>{{ item.0.value }}</td>
+        							<td>{{ item.1.value }}</td>
+        							<td>{{ item.2.value }}</td>
+        							<td>{{ item.3.value }}</td>
+        						</tr>
+        						{% endfor %}
+        					</tbody>
+        				</table>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="constr-srv-img-2 fit-img" src="{% static 'images/mount/mount_1.jpg' %}" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="constr-srv-img-2 fit-img" src="{% static 'images/mount/mount_2.jpg' %}" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="constr-srv-img-2 fit-img" src="{% static 'images/mount/mount_3.jpg' %}" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="constr-srv-img-2 fit-img" src="{% static 'images/mount/mount_4.jpg' %}" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="constr-srv-img-2 fit-img" src="{% static 'images/mount/mount_5.jpg' %}" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="constr-srv-img-2 fit-img" src="{% static 'images/mount/mount_6.jpg' %}" alt="">
+                                </div>
+                            </div>
+                        </div> 
+        			</div>
+        		</div>
+        	</div>
+        </div>
+  <div class="clearfix"></div>
+     </div>
+
+    </div>
+
+</div>
+
+</section>
+{% endblock %}

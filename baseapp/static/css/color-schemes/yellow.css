@@ -1,0 +1,338 @@
+::selection {
+  color: white;
+  background: #f9b701; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: white;
+  background: #f9b701; /* Gecko Browsers */
+}
+
+.ip-header .ip-loader svg path.ip-loader-circle{
+  stroke: #f9b701;
+}
+
+.color-overlay {
+
+}
+
+a:hover {
+    color: #f9b701;
+}
+
+a:active {
+    color: #f9b701;
+}
+
+a:focus{
+  color: #f9b701;
+}
+
+
+.sticky-navigation{
+
+    /*border-bottom: solid 1px #f9b701;*/
+}
+
+.sticky-navigation .main-navigation .current a{
+    color: #f9b701;
+}
+
+.sticky-navigation .main-navigation li a:hover{
+  color: #f9b701;
+  background: none;
+}
+
+.sticky-navigation .main-navigation li a:active{
+  color: #f9b701;
+  background: none;
+}
+
+.sticky-navigation .main-navigation li a:focus{
+  color: #f9b701;
+  background: none;
+}
+
+.navbar-toggle .icon-bar{
+  background-color: #f9b701;
+}
+
+
+.services .single-service .icon-container .icon{
+
+    color: #cd7d53;
+}
+
+.featured-item .icon i{
+    color: #6F8B9D;
+}
+
+
+
+.work-process .itemz .inner-content > i{
+  background-color: #f9b701;
+}
+
+.hvr-ripple-out:before{
+    border: #f9b701 solid 1px;
+}
+
+.progress .bar {
+    background: #f9b701;
+}
+
+ .pf-filter li.active{
+  color: #f9b701;
+}
+
+.portfolio-hover{
+    background-color: rgba(255, 255, 255, .9);
+}
+
+
+.masonry-grid-4 .portfolio-hover{
+    background-color: rgba(255, 255, 255, .8);
+}
+.portfolio-project-info li a:hover {
+    color: #f9b701;
+}
+
+.testimonials .owl-theme .owl-controls .owl-page span {
+    background: #f9b701;
+    border-radius: 20%;
+    max-height: 2px;
+}
+
+.clients .owl-theme .owl-controls .owl-page span {
+    background: #f9b701;
+    border-radius: 20%;
+    max-height: 2px;
+}
+
+.team-hover {
+    border: 2px solid #FFFFFF;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.team-hover .s-link a {
+    text-align: center;
+    color: #f9b701;
+}
+
+.desk p {
+    color: #f9b701;
+}
+
+.team .owl-theme .owl-controls .owl-page span {
+    background: #f9b701;
+}
+
+.special-package{
+  color: #f9b701;
+}
+
+.special-package .price h2,
+.special-package .price h2 span,
+.special-package .price p
+{
+  color: #f9b701;
+}
+
+.special-package .hvr-bounce-to-right:before{
+  background: #f9b701;
+}
+
+.special-package .single-package{
+  border: 1px solid #f9b701;
+}
+
+.special-package .btn-price{
+  color: #f9b701;
+  border-color: #f9b701;
+}
+
+.special-package .btn-price:hover{
+  color: #fff;
+}
+
+
+.btn-lines .line-top,
+.btn-lines .line-bottom,
+.btn-lines .line-left,
+.btn-lines .line-right {
+  background: #f9b701;
+}
+
+.funfactor .icon-container i {
+    color: #f9b701;
+}
+
+.blog-title :hover{
+    color: #f9b701;
+}
+
+.blog-post-title :hover {
+    color: #f9b701;
+}
+
+.author a :hover {
+  color: #f9b701;
+
+ }
+
+ .read-more :hover{
+    color: #f9b701;
+ }
+
+.blog-list-item-detail a:hover{
+  color: #f9b701;
+}
+
+.blog-item-detail a:hover{
+  color: #f9b701;
+}
+
+.input-field:active{
+  border: 1px solid  #f9b701;
+  border-radius: 5px;
+}
+
+.input-field:focus {
+  border-color: #f9b701;
+}
+
+.clearlist li a:hover  {
+    color: #f9b701;
+}
+
+.tags a:hover {
+   color: #f9b701;
+  border: 1px solid #f9b701;
+}
+
+.article-nav a i:hover{
+  color: #f9b701;
+}
+
+/**/
+
+.standard-button {
+    background: #B58C82;
+}
+
+.standard-button2 {
+    background:  #f9b701;
+}
+
+.standard-button2:hover {
+    background: #fff;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background: #005885;
+    border-color: inherit;
+}
+
+.colored-line,
+.colored-line-left {
+    background:  #f9b701;
+}
+
+.main-color {
+    color:  #f9b701;
+}
+
+.theme-color {
+    color:  #f9b701;
+}
+
+.theme-color-bg {
+    background-color:  #f9b701;
+}
+
+.color-bg {
+	background: rgb(127,111,91);
+	color: #FFFFFF;
+}
+
+.contact .contact-button {
+    border: 2px solid #656565;
+    color: #958257;
+}
+
+.contact .contact-button:hover {
+    background:  #f9b701;
+}
+
+.contact .contact-box .input-box:active,
+.contact .contact-box .textarea-box:active,
+.contact .contact-box .input-box:focus,
+.contact .contact-box .textarea-box:focus {
+    border: 1px solid  #f9b701;
+    color: #111;
+}
+
+.social-icons li a:hover {
+    color:  #f9b701;
+}
+
+.comment-reply .contact-box .input-box:active,
+.comment-reply .contact-box .textarea-box:active,
+.comment-reply .contact-box .input-box:focus,
+.comment-reply .contact-box .textarea-box:focus {
+    border: 1px solid  #f9b701;
+    color: #111;
+}
+
+.contact  .contact-address i{
+  color: #f9b701;
+}
+
+.nav-transparent{
+  border-bottom: solid 1px transparent;
+}
+
+.list-tweets li a:hover{
+  color: #f9b701;
+}
+
+nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .content ul.menu-col li a:hover,
+.side .widget ul.link li a:hover,
+.side .widget ul.link li a:focus,
+.check-list li:before,
+ul.cart-list > li > h6 > a,
+.attr-nav > ul > li > a:hover,
+.attr-nav > ul > li > a:focus,
+nav.navbar-sidebar ul.nav li.dropdown.on > a,
+nav.navbar-sidebar .dropdown .megamenu-content .col-menu.on .title,
+nav.navbar-sidebar ul.nav li.dropdown ul.dropdown-menu li a:hover,
+nav.navbar ul.nav li.dropdown.on > a,
+nav.navbar.navbar-inverse ul.nav li.dropdown.on > a,
+nav.navbar-sidebar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a,
+nav.navbar .dropdown .megamenu-content .col-menu.on .title,
+nav.navbar ul.nav > li > a:hover,
+nav.navbar ul.nav li.active > a,
+nav.navbar li.dropdown ul.dropdown-menu > li a:hover{
+    color: #f9b701;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+nav.navbar.navbar-transparent ul.nav > li > a:hover,
+nav.navbar.no-background ul.nav > li > a:hover,
+nav.navbar ul.nav li.scroll.active > a,
+nav.navbar.navbar-dark ul.nav li.dropdown ul.dropdown-menu  > li > a:hover,
+nav.navbar ul.nav li.dropdown.on > a,
+nav.navbar-dark ul.nav li.dropdown.on > a{
+    color: #f9b701!important;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+@media(max-width:920px){
+    nav.navbar .dropdown .megamenu-content .col-menu ul > li > a:hover,
+    nav.navbar.navbar-dark .dropdown .megamenu-content .col-menu .title:hover{
+        color: #f9b701!important;
+        background: rgba(0, 0, 0, 0.07);
+    }
+}

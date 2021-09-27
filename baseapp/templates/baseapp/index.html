@@ -1,0 +1,236 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+RUTERM | CТАЛЬНЫЕ РАДИАТОРЫ
+{% endblock %}
+
+{% block description %}
+Компания RUTERM лидер на рынке стальных панельных радиаторов в РФ.
+{% endblock %}
+
+{% block header %}
+<section class="dark-image-bg parallax-bg" data-parallax="scroll" data-image-src="{% static 'images/2_2.jpg' %}" >
+
+    <div id="tt-carousel" class="carousel tt-carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <!-- <li data-target="#tt-carousel" data-slide-to="0" class="active"></li> -->
+            <!-- <li data-target="#tt-carousel" data-slide-to="1"></li> -->
+        </ol>
+
+        <div class="slider-overlay carousel-inner ">
+            <div class="item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="intro-section">
+                                <h1 style="font-weight: 700;" class="intro hs2-h1 animated Big animation-delay-6 text-white-8">RUTERM<br><span>СТАЛЬНЫЕ РАДИАТОРЫ</span></h1>
+                                <a href="{% url 'show_products' %}" class="btn agency-btn-1 hvr-bounce-to-right-white">каталог</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-section-agency relative constr-bg-color">
+    <div class="container">
+        <div class="row section-separator">
+
+          <div class="section-header-2">
+            <h4>Нам доверяют партнеры, для которых мы выпускаем радиаторы.</h4>
+        </div>
+        <div class="section-description">
+       Компания RUTERM является одним из лидеров на рынке стальных панельных радиаторов в РФ,<br> стран Европы и СНГ, и располагает хорошо развитой дистрибуцией на этой территории. 
+     </div>
+
+     <div class="clearfix"></div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="section-top res-branch constr-bg-color services">
+
+    <div class="section-header-1">
+        <h4>Основные принципы компании</h4>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div class="single-service">
+
+                    <div class="icon-container">
+                        <div class="icon hvr-ripple-out">
+                            <i class="icon-briefcase"></i>
+                        </div>
+                    </div>
+
+                    <h5 class="section-title">Профессионализм</h5>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="single-service">
+                    <div class="icon-container">
+                        <div class="icon hvr-ripple-out">
+                            <i class="icon-genius"></i>
+                        </div>
+                    </div>
+                    <h5 class="section-title">Качество</h5>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="single-service">
+
+                    <div class="icon-container">
+                        <div class="icon hvr-ripple-out">
+                            <i class="icon-trophy"></i>
+                        </div>
+                    </div>
+                    <h5 class="section-title">Лидерство</h5>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="" style="padding-bottom: 50px;">
+    <div class="tab-content">
+    <div class="nopadding intr-srv-desc container">
+        <div class="row">
+            <div class=" col-md-6">
+                <div class="fit-img index-pic-1">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="arch-srv-heading right" style="padding-left: 10px; padding-right: 10px;">Радиаторы с боковым подключением</div>
+                <div class="arch-srv-subhead right" style="padding-bottom: 50px;">RUTERM COMPACT</div>
+                <div class="as-index-products right">
+                    <p>
+                        Компания RUTERM производит стальные панельные радиаторы с боковым подключением по фирменным стандартам качества в полном ассортименте типоразмеров. 
+                    </p>    
+                    <p >
+                        Это позволяет продукцией под одним брендом укомплектовать жилой дом или административное здание.
+                    </p>
+                </div>    
+                <div align="left">
+                    <button class="btn hvr-bounce-to-right" data-style="expand-left"><a href="{% url 'show_category' cpu_slug='radiatory-s-bokovym-podkliucheniem' %}">Подробнее</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="arch-srv-block-1">
+            <div class="col-md-6">
+                <div class="arch-srv-heading" style="padding-left: 10px; padding-right: 10px;">Радиаторы с нижним подключением</div>
+                <div class="arch-srv-subhead" style="padding-bottom: 50px;">RUTERM VENTIL COMPACT</div>
+                    <div class="as-index-products">
+                        <p>
+                           Компания RUTERM производит стальные панельные радиаторы с нижним подключением во всех типоразмерах. Это позволяет без труда разрабатывать схему отопления для помещений с нестандартными интерьерными решениями.
+                        </p>
+                    </div>
+                    <div align="right">
+                        <button  class="btn hvr-bounce-to-right" data-style="expand-left"><a href="{% url 'show_category' cpu_slug='radiatory-s-nizhnim-podkliucheniem' %}">Подробнее</a></button>
+                    </div>
+            </div>
+            <div class="col-md-6">
+                <div class= "fit-img index-pic-2">
+                </div>
+             </div>
+        </div>
+    </div>
+    </div>
+</div>
+    
+</section>
+<section class="mt-50 services const-service constr-bg-color-2" id="services">
+
+    <div class="">
+
+        <div class="row no-gutter">
+
+            <div class="col-md-4">
+                <div class="avatar"> <div class="const-img-border-small-fix"></div><img src="{% static 'images/construct/index_pic_3.jpg' %}" alt="" class="fit-img"> </div>
+            </div>
+            <div class="col-md-8">
+                <div class="const-srv-title">
+                    Преимущества компании RUTERM
+
+                </div>
+                <div class="const-srv">
+                    <div class="col-md-6">
+
+                        <div class="consult-item consult-cover  text-left m-b-30">
+                            <div class="icon">
+                                <i class="icon-hotairballoon"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Полный цикл производства</h4>
+                            </div>
+                            <div class="desc">
+                                Автоматизированные производственные линии
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="consult-item consult-cover  text-left m-b-30">
+                            <div class="icon">
+                                <i class=" icon-lightbulb"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Передовые мировые технологии</h4>
+                            </div>
+                            <div class="desc">
+                                - Инновационная аэродинамическая решетка увеличивает конвекцию на 4% а теплоотдачу на 2% <br>
+                                - Высокий коэффициент полезного действия – до 75%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="consult-item consult-cover  text-left m-b-30">
+                            <div class="icon">
+                                <i class="icon-global"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Современное европейское оборудование</h4>
+                            </div>
+                            <div class="desc">
+                                система управления качеством ISO 9001:2015
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="consult-item consult-cover  text-left m-b-30">
+                            <div class="icon">
+                                <i class=" icon-aperture"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Гарантия до 10 лет</h4>
+                            </div>
+                            <div class="desc">
+                                Гарантийный срок эксплуатации радиаторов до 10лет.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>    
+{% endblock %}
