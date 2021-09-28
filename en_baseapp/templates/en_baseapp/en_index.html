@@ -1,0 +1,39 @@
+{% extends 'en_baseapp/en_base.html' %}
+
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block description %}
+{% endblock %}
+
+
+{% block content %}
+
+<section class="dark-image-bg parallax-bg" data-parallax="scroll" data-image-src="{% static 'images/2_2.jpg' %}" >
+
+    <div id="tt-carousel" class="carousel tt-carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <!-- <li data-target="#tt-carousel" data-slide-to="0" class="active"></li> -->
+            <!-- <li data-target="#tt-carousel" data-slide-to="1"></li> -->
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="intro-section">
+                                <h1 style="font-weight: 700;" class="intro hs2-h1 animated Big animation-delay-6 text-white-8">RUTERM<br><span>STEEL RADIATORS</span></h1>
+                                <a href="" class="btn agency-btn-1 hvr-bounce-to-right-white">products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

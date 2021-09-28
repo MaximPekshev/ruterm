@@ -54,23 +54,23 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-right" data-in="" data-out="">
                             <li>
-                                <a href="{% url 'show_index' %}">Главная</a>
+                                <a href="">Home</a>
                             </li>
                             <li>
-                                <a href="{% url 'show_about_company' %}">О компании</a>
+                                <a href="">About</a>
                             </li>
                             <li>
-                                <a href="{% url 'show_products' %}">Продукция</a>
+                                <a href="">Products</a>
                             </li>
                             <li>
-                                <a href="{% url 'show_production' %}">Производство</a>
+                                <a href="{% url 'en_show_production' %}">Manufacture</a>
                             </li>
                             <li>
-                                <a href="{% url 'show_contacts' %}" >Контакты</a>
+                                <a href="" >Contacts</a>
                             </li>
-                           <!--  <li>
-                                <a href="{% url 'en_show_index' %}" >EN</a>
-                            </li> -->
+                            <li>
+                                <a href="{% url 'show_index' %}" >RU</a>
+                            </li>
                         </ul>
                     </div>
             </div>
@@ -92,29 +92,28 @@
             <div class="col-md-offset-2 col-md-4 footer-column">
                 <div class="footer-logo">
                     <img src="{% static 'images/g316.png' %}" alt="logo" />
-                    <p style="color: #e4002b;">RUTERM</p>
+                    <p>RUTERM</p>
                 </div>
                 <div class="footer-desc">
-                    Наша продукция успешно продается в странах СНГ и Европе.
+                    Our products are successfully sold in the CIS countries and Europe.
                 </div>
-                <div class="copyright-3">Developed by: <a style="color: #e4002b;" href="https://annasoft.ru" target="_blank">Annasoft</a></div>
+                <div class="copyright-3">Developed by: <a href="https://annasoft.ru" target="_blank">Annasoft</a></div>
             </div>
             <div class="col-md-2 footer-column" style="padding-left: 30px;">
                 <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item--heading">Меню</li>
-                    <li class="footer__nav-item"><a href="{% url 'show_index' %}" class="footer__nav-link">Главная</a></li>
-                    <li class="footer__nav-item"><a href="{% url 'show_about_company' %}" class="footer__nav-link">О компании</a></li>
-                    <li class="footer__nav-item"><a href="{% url 'show_products' %}" class="footer__nav-link">Продукция</a></li>
-                    <li class="footer__nav-item"><a href="{% url 'show_production' %}" class="footer__nav-link">Производство</a></li>
-                    <li class="footer__nav-item"><a href="{% url 'show_contacts' %}" class="footer__nav-link">Контакты</a></li>
+                    <li class="footer__nav-item footer__nav-item--heading">Menu</li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Home</a></li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">About</a></li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Products</a></li>
+                    <li class="footer__nav-item"><a href="{% url 'en_show_production' %}" class="footer__nav-link">Manufacture</a></li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Contacts</a></li>
                 </ul>
             </div>
 
             <div class="col-md-2 footer-column" style="padding-left: 30px;">
                 <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item--heading">Контакты</li>
-                    <li>308519, Белгородская область,<br> Белгородский район, пгт. Северный,<br> ул. Березовая, зд. 5а</li>
-
+                    <li class="footer__nav-item footer__nav-item--heading">Contacts</li>
+                    <li>308519, Russian Federation,<br> Belgorod region,<br>Severnyi town,<br>Berezovaya st., 5а</li>
                     <li class="email-3"><a href="email: office@ru-therm.ru">office@ru-therm.ru</a></li>
                 </ul>
             </div>
