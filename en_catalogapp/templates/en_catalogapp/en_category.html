@@ -1,0 +1,79 @@
+{% extends 'en_baseapp/en_base.html' %}
+
+{% load static %}
+
+{% block title %}
+{% if category.meta_name_en %} {{ category.meta_name_en }} {% else %}{{ category.title_en }} | RUTERM {% endif %}
+{% endblock %}
+
+{% block description %}
+{% if category.meta_description_en %} {{ category.meta_description_en }} {% else %}{{ category.title_en }} | RUTERM {% endif %}
+{% endblock %}
+
+{% block header %}
+<section>
+	<div class="parallax-bg constr-page-image-parallax constr-page-overlay" data-parallax="scroll" data-image-src="{% static 'images/background_1.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h1 class="constr-p-t" style="line-height: 1;">{{ category.title_en }}</h1>
+					<div class="constr-under-line-2"></div>
+				</div>
+			</div>
+		</div>
+		<nav aria-label="breadcrumb">
+  
+</nav>
+	</div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<!-- <section class="shop-page">
+	<div class=" product-grid" align="left">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="{% url 'show_index' %}">Главная</a></li>
+			<li class="breadcrumb-item active" aria-current="page">{{ category.title }}</li>
+		</ol>
+	</div>
+</section> -->
+
+<section class="shop-page">
+	<div class=" product-grid">
+		<div class="container">
+			<div class="row">
+				{% for item in products %}
+				<div class="col-md-4">
+					<div class="product-list">
+						<div class="product-img">
+							<a href="{% url 'en_show_product_detail' cpu_slug=item.cpu_slug %}"><img src="{{ item.get_main_image.images.url }}" alt=""/></a>
+						</div>
+						<div class="product-price">
+							<a href="{% url 'en_show_product_detail' cpu_slug=item.cpu_slug %}">{{ item.title_en }}</a>
+						</div>
+						<div class="product-title">
+							<div class="row">
+								<p class="col-md-3 col-xs-3" align="left">Type</p>
+								<p class="col-md-9 col-xs-9" align="right">{{ item.good_type }}</p>
+							</div>
+							<div class="row">
+								<p class="col-md-3 col-xs-3" align="left">Lenght</p>
+								<p class="col-md-9 col-xs-9" align="right">{{ item.good_lenght }} mm (pitch 100 mm)</p>
+							</div>
+							<div class="row">
+								<p class="col-md-3 col-xs-3" align="left">Height</p>
+								<p class="col-md-9 col-xs-9" align="right">{{ item.good_height }} mm</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</section>
+{% endblock %}

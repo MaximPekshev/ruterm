@@ -66,9 +66,12 @@
                                 <a href="{% url 'show_production' %}">Производство</a>
                             </li>
                             <li>
+                                <a href="{% url 'show_documents' %}">Документы</a>
+                            </li>
+                            <li>
                                 <a href="{% url 'show_contacts' %}" >Контакты</a>
                             </li>
-                           <!--  <li>
+                            <!-- <li>
                                 <a href="{% url 'en_show_index' %}" >EN</a>
                             </li> -->
                         </ul>
@@ -89,13 +92,13 @@
 
     <footer class="footer-section footer-1">
         <div class="row footer-content">
-            <div class="col-md-offset-2 col-md-4 footer-column">
+            <div class="col-md-offset-1 col-md-4 footer-column">
                 <div class="footer-logo">
                     <img src="{% static 'images/g316.png' %}" alt="logo" />
                     <p style="color: #e4002b;">RUTERM</p>
                 </div>
                 <div class="footer-desc">
-                    Наша продукция успешно продается в странах СНГ и Европе.
+                    Наша продукция успешно продается в странах СНГ и Европы.
                 </div>
                 <div class="copyright-3">Developed by: <a style="color: #e4002b;" href="https://annasoft.ru" target="_blank">Annasoft</a></div>
             </div>
@@ -110,13 +113,27 @@
                 </ul>
             </div>
 
-            <div class="col-md-2 footer-column" style="padding-left: 30px;">
-                <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item--heading">Контакты</li>
-                    <li>308519, Белгородская область,<br> Белгородский район, пгт. Северный,<br> ул. Березовая, зд. 5а</li>
+            <div class="col-md-5 footer-column" style="padding-left: 30px;">
+                <div class="row">
+                    <div class="col-md-5">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item footer__nav-item--heading">Контакты</li>
+                            <li>308519, Белгородская область,<br> Белгородский район, пгт. Северный,<br> ул. Березовая, зд. 5а</li>
 
-                    <li class="email-3"><a href="email: office@ru-therm.ru">office@ru-therm.ru</a></li>
-                </ul>
+                            <li class="email-3"><a  style="color: #e4002b;" href="email: office@ru-therm.ru">office@ru-therm.ru</a></li>
+                            <li class="footer__nav-item social-li"><a href="https://vk.com/club206040685" target="_blank" class="footer__nav-link">VK</a><a href="https://www.facebook.com/groups/614993079905058/" target="_blank" class="footer__nav-link">FACEBOOK</a><a href="https://instagram.com/ruterm31?utm_medium=copy_link" target="_blank" class="footer__nav-link">INSTAGRAM</a><a href="https://ok.ru/group/60928093192271" target="_blank" class="footer__nav-link">OK</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item footer__nav-item--heading">Телефоны</li>
+                            <li>Приемная<a style="color: #e4002b;" href="tel:+74722204070"> +7(4722)20-40-70</a></li>
+                            <li>Комерческий отдел <a style="color: #e4002b;" href="tel:+74722204074"> +7(4722)20-40-74</a></li>
+                            <li>Отдел закупок <a style="color: #e4002b;" href="tel:+74722204075"> +7(4722)20-40-75</a></li>
+                            <li>Отдел кадров <a style="color: #e4002b;" href="tel:+74722204071"> +7(4722)20-40-71</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="scroll-up">

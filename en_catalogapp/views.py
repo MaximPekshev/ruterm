@@ -3,7 +3,7 @@ from catalogapp.models import Category, Good
 import xlrd
 import os
 
-def show_category(request, cpu_slug):
+def en_show_category(request, cpu_slug):
 
 	category = Category.objects.filter(cpu_slug=cpu_slug).first()
 	products = Good.objects.filter(category=category)
@@ -13,10 +13,11 @@ def show_category(request, cpu_slug):
 		'products' : products,
 	}
 
-	return render(request, 'catalogapp/category.html', context)
+	return render(request, 'en_catalogapp/en_category.html', context)
 
 
-def show_product_detail(request, cpu_slug):
+def en_show_product_detail(request, cpu_slug):
+
 	try:
 		product = Good.objects.get(cpu_slug=cpu_slug)
 	except:
@@ -37,7 +38,7 @@ def show_product_detail(request, cpu_slug):
 		heat_body = []
 
 		try:
-			book = xlrd.open_workbook(os.path.abspath('baseapp/static/files/type{}.xls'.format(product.good_type)))
+			book = xlrd.open_workbook(os.path.abspath('baseapp/static/files/type{}_en.xls'.format(product.good_type)))
 		except:
 			book = None
 
@@ -73,5 +74,4 @@ def show_product_detail(request, cpu_slug):
 
 	}			
 
-	return render(request, 'catalogapp/product_detail.html', context)
-
+	return render(request, 'en_catalogapp/en_product_detail.html', context)

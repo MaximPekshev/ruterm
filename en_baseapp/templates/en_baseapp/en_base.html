@@ -48,25 +48,28 @@
                     </button>
                    <!--  <a class="navbar-brand" href="{% url 'show_index' %}"><img src="{% static 'images/logo_full.png' %}
                         " class="logo" style="height: 46px; width: auto;"  alt=""></a> -->
-                    <a class="navbar-brand" href="{% url 'show_index' %}"><img src="{% static 'images/g316.png' %}
+                    <a class="navbar-brand" href="{% url 'en_show_index' %}"><img src="{% static 'images/g316.png' %}
                         " class="logo" style="width: 46px;"  alt=""></a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-right" data-in="" data-out="">
                             <li>
-                                <a href="">Home</a>
+                                <a href="{% url 'en_show_index' %}">Home</a>
                             </li>
                             <li>
-                                <a href="">About</a>
+                                <a href="{% url 'en_show_about' %}">About</a>
                             </li>
                             <li>
-                                <a href="">Products</a>
+                                <a href="{% url 'en_show_products' %}">Products</a>
                             </li>
                             <li>
                                 <a href="{% url 'en_show_production' %}">Manufacture</a>
                             </li>
                             <li>
-                                <a href="" >Contacts</a>
+                                <a href="{% url 'en_show_documents'  %}">Documents</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'en_show_contact' %}">Contact</a>
                             </li>
                             <li>
                                 <a href="{% url 'show_index' %}" >RU</a>
@@ -89,33 +92,47 @@
 
     <footer class="footer-section footer-1">
         <div class="row footer-content">
-            <div class="col-md-offset-2 col-md-4 footer-column">
+            <div class="col-md-offset-1 col-md-4 footer-column">
                 <div class="footer-logo">
                     <img src="{% static 'images/g316.png' %}" alt="logo" />
-                    <p>RUTERM</p>
+                    <p  style="color: #e4002b;">RUTERM</p>
                 </div>
                 <div class="footer-desc">
                     Our products are successfully sold in the CIS countries and Europe.
                 </div>
-                <div class="copyright-3">Developed by: <a href="https://annasoft.ru" target="_blank">Annasoft</a></div>
+                <div class="copyright-3">Developed by: <a  style="color: #e4002b;" href="https://annasoft.ru" target="_blank">Annasoft</a></div>
             </div>
             <div class="col-md-2 footer-column" style="padding-left: 30px;">
                 <ul class="footer__nav-list">
                     <li class="footer__nav-item footer__nav-item--heading">Menu</li>
                     <li class="footer__nav-item"><a href="" class="footer__nav-link">Home</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">About</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Products</a></li>
+                    <li class="footer__nav-item"><a href="{% url 'en_show_about' %}" class="footer__nav-link">About</a></li>
+                    <li class="footer__nav-item"><a href="{% url 'en_show_products' %}" class="footer__nav-link">Products</a></li>
                     <li class="footer__nav-item"><a href="{% url 'en_show_production' %}" class="footer__nav-link">Manufacture</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Contacts</a></li>
+                    <li class="footer__nav-item"><a href="{% url 'en_show_contact' %}" class="footer__nav-link">Contact</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-2 footer-column" style="padding-left: 30px;">
-                <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item--heading">Contacts</li>
-                    <li>308519, Russian Federation,<br> Belgorod region,<br>Severnyi town,<br>Berezovaya st., 5а</li>
-                    <li class="email-3"><a href="email: office@ru-therm.ru">office@ru-therm.ru</a></li>
-                </ul>
+            <div class="col-md-5 footer-column" style="padding-left: 30px;">
+                 <div class="row">
+                    <div class="col-md-5">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item footer__nav-item--heading">Contact</li>
+                            <li>308519, Russian Federation,<br> Belgorod region,<br>Severnyi town,<br>Berezovaya st., 5а</li>
+                            <li class="email-3"><a  style="color: #e4002b;" href="email: office@ru-therm.ru">office@ru-therm.ru</a></li>
+                            <li class="footer__nav-item social-li"><a href="https://vk.com/club206040685" target="_blank" class="footer__nav-link">VK</a><a href="https://www.facebook.com/groups/614993079905058/" target="_blank" class="footer__nav-link">FACEBOOK</a><a href="https://instagram.com/ruterm31?utm_medium=copy_link" target="_blank" class="footer__nav-link">INSTAGRAM</a><a href="https://ok.ru/group/60928093192271" target="_blank" class="footer__nav-link">OK</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item footer__nav-item--heading">Phone</li>
+                            <li>Reception<a style="color: #e4002b;" href="tel:+74722204070"> +7(4722)20-40-70</a></li>
+                            <li>Commercial dep. <a style="color: #e4002b;" href="tel:+74722204074"> +7(4722)20-40-74</a></li>
+                            <li>Purchasing dep. <a style="color: #e4002b;" href="tel:+74722204075"> +7(4722)20-40-75</a></li>
+                            <li>HR dep. <a style="color: #e4002b;" href="tel:+74722204071"> +7(4722)20-40-71</li>
+                        </ul>
+                    </div>
+                </div>        
             </div>
         </div>
         <div class="scroll-up">

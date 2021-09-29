@@ -11,6 +11,7 @@ from django.conf import settings
 urlpatterns = [
     path('', include('baseapp.urls')),
     path('en/', include('en_baseapp.urls')),
+    path('en/catalog/', include('en_catalogapp.urls')),
     path('catalog/', include('catalogapp.urls')),
     path('admin/', admin.site.urls),
 ]

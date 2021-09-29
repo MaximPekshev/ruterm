@@ -16,8 +16,11 @@ class Category(models.Model):
 	title 				= models.CharField(max_length = 150, verbose_name='Наименование')
 	title_en			= models.CharField(max_length = 150, verbose_name='Наименование на английском', blank=True,)
 	description 		= models.TextField(max_length=10240, verbose_name='Описание', blank=True, null=True)
+	description_en 		= models.TextField(max_length=2048, verbose_name='Описание на английском', blank=True)
 	meta_name 			= models.CharField(max_length=150, verbose_name='meta name', blank=True, null=True)
 	meta_description 	= models.TextField(max_length=1024, verbose_name='meta description', blank=True, null=True)
+	meta_name_en 		= models.CharField(max_length=150, verbose_name='meta name', blank=True, null=True)
+	meta_description_en	= models.TextField(max_length=1024, verbose_name='meta description', blank=True, null=True)
 	cpu_slug			= models.SlugField(max_length=70, verbose_name='ЧПУ_Url', blank=True, db_index=True)
 	picture				= models.ImageField(upload_to=get_image_name, verbose_name='Изображение 870x502', default=None, null=True, blank=True)
 

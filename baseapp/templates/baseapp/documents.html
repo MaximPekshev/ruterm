@@ -1,0 +1,55 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Документы | RUTERM
+{% endblock %}
+
+{% block description %}
+
+Документы | RUTERM
+
+{% endblock %}
+
+{% block header %}
+<section>
+	<div class="parallax-bg constr-page-image-parallax constr-page-overlay" data-parallax="scroll" data-image-src="{% static 'images/background_1.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h1 class="constr-p-t">Документы</h1>
+					<div class="constr-under-line-2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="section-top construct-project" id="portfolio" style="padding-bottom: 80px;">
+	<div class="nopadding">
+		<div class="row">
+			<div class="section-header-1">
+				<h4>Скачать документы</h4>
+			</div>
+			<div class="col-md-12">
+				<div id="even-grid">
+					<div class="isotope">
+						<div class="grids-item item nopadding branding web-solution">
+							<img class="grid-item"  src="{% static 'images/cert_preview.jpg' %}" alt="portfolio">
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<div class="port-title">Сертификат Ruterm</div><br>
+									<a class="lightbox" data-lightbox-gallery="gallery1" target="_blank" href="{% static 'files/Ruterm_certificate.pdf' %}"> <i class="icon-magnifying-glass"></i> </a>
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div> 
+	</div>
+</section>
+{% endblock %}

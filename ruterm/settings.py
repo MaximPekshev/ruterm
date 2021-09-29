@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'baseapp',
     'en_baseapp',
     'catalogapp',
+    'en_catalogapp',
 ]
 
 MIDDLEWARE = [

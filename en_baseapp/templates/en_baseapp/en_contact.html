@@ -1,13 +1,13 @@
-{% extends 'baseapp/base.html' %}
+{% extends 'en_baseapp/en_base.html' %}
 
 {% load static %}
 
 {% block title %}
-Контакты | RUTERM
+Contacts | RUTERM
 {% endblock %}
 
 {% block description %}
-308519, Белгородская область, Белгородский район, пгт. Северный,  ул. Березовая, зд. 5а
+308519, Russian Federation, Belgorod region, Severnyi town, Berezovaya st., 5а
 {% endblock %}
 
 {% block header %}
@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<h1 class="constr-p-t">Контакты</h1>
+					<h1 class="constr-p-t">Contact</h1>
 					<div class="constr-under-line-2"></div>
 
 				</div>
@@ -35,6 +35,8 @@
 
 			<div class="col-sm-4">
 				<div class="single-service">
+
+
 					<div class="icon-container">
 						<div class="icon hvr-ripple-out">
 							<i class="icon-compass"></i>
@@ -43,9 +45,9 @@
 
 
 
-					<h5 class="section-title">Адрес</h5>
+					<h5 class="section-title">Address</h5>
 					<p>
-						<b>308519, Белгородская область,<br> Белгородский район, пгт. Северный,<br> ул. Березовая, зд. 5а</b>
+						<b>308519, Russian Federation,<br> Belgorod region, Severnyi town,<br> Berezovaya st., 5а</b>
 					</p>
 
 				</div>
@@ -59,13 +61,13 @@
 						</div>
 					</div>
 
-					<h5 class="section-title">Контакты</h5>
+					<h5 class="section-title">Phone</h5>
 					<p>
 						<b>
-							Приемная: <a href="tel:+74722204070">+7(4722)20-40-70</a><br>
-							Комерческий отдел: <a href="tel:+74722204074">+7(4722)20-40-74</a><br>
-							Отдел закупок: <a href="tel:+74722204075">+7(4722)20-40-75</a><br>
-							Отдел кадров: <a href="tel:+74722204071">+7(4722)20-40-71</a><br>
+							Reception <a href="tel:+74722204070">+7(4722)20-40-70</a><br>
+							Commercial dep. <a href="tel:+74722204074">+7(4722)20-40-74</a><br>
+							Purchasing dep. <a href="tel:+74722204075">+7(4722)20-40-75</a><br>
+							HR dep. <a href="tel:+74722204071">+7(4722)20-40-71</a><br>
 							Email: <a href="email: office@ru-therm.ru">office@ru-therm.ru</a>
 						</b>
 					</p>
@@ -81,16 +83,18 @@
 						</div>
 					</div>
 
-					<h5 class="section-title">Рабочее время</h5>
+					<h5 class="section-title">BUSINESS HOUR</h5>
 
 					<p>
 						<b>
-							09:00 - 18:00 [ПН-ПТ]<br>
-							ВЫХОДНОЙ [СБ-ВС]
+							09:00 - 18:00 [MO-FR]<br>
+							DAY OFF [SA-SU]
 						</b>
 					</p>
+
 				</div>
 			</div>
+
 		</div>
 
 
@@ -103,7 +107,7 @@
 		<div class="section-header-2 wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
 
 			<div class="section-description">
-				Свяжитесь с нами
+				CONTACT US
 			</div>
 			<div class="under-line-1"></div>
 		</div>
@@ -116,7 +120,7 @@
 					<form class="contact-form" method="POST" action="">
 						{% csrf_token %}
 						<h4 class="success">
-							<i class="icon_check"></i> Ваше сообщение успешно отправлено
+							<i class="icon_check"></i> Your message has been sent successfully.
 						</h4>
 
 						<h4 class="error">
@@ -124,19 +128,19 @@
 						</h4>
 
 						<div class="col-md-6">
-							<input class="form-control input-box" id="name" type="text" name="name" placeholder="Ваше Имя">
+							<input class="form-control input-box" id="name" type="text" name="name" placeholder="Your Name">
 						</div>
 
 						<div class="col-md-6">
-							<input class="form-control input-box" id="email" type="email" name="email" placeholder="Ваш Email">
+							<input class="form-control input-box" id="email" type="email" name="email" placeholder="Your Email">
 						</div>
 
 						<div class="col-md-12">
-							<input class="form-control input-box" id="subject" type="text" name="subject" placeholder="Тема">
-							<textarea class="form-control textarea-box" id="message" rows="8" placeholder="Сообщение"></textarea>
+							<input class="form-control input-box" id="subject" type="text" name="subject" placeholder="Subject">
+							<textarea class="form-control textarea-box" id="message" rows="8" placeholder="Message"></textarea>
 						</div>
 
-						<button class="btn hvr-bounce-to-right" data-style="expand-left">Отправить</button>
+						<button class="btn hvr-bounce-to-right" data-style="expand-left">Send Message</button>
 
 					</form>
 

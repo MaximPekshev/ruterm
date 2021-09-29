@@ -17,5 +17,8 @@ def show_products(request):
 	return render(request, 'baseapp/products.html', context)
 
 def show_contacts(request):
-	return render(request, 'baseapp/contacts.html')	
+	return render(request, 'baseapp/contacts.html')
+
+def show_documents(request):
+	return render(request, 'baseapp/documents.html')
 
