@@ -3,13 +3,15 @@
 {% load static %}
 
 {% block title %}
+RUTERM | STEEL RADIATORS
 {% endblock %}
 
 {% block description %}
+RUTERM is the leader in the market of steel panel radiators in the Russian Federation.
 {% endblock %}
 
 
-{% block content %}
+{% block header %}
 
 <section class="dark-image-bg parallax-bg" data-parallax="scroll" data-image-src="{% static 'images/3_2.jpg' %}" >
 
@@ -35,5 +37,205 @@
         </div>
     </div>
 </section>
+
+{% endblock %}
+
+{% block content %}
+
+<section class="features-section-agency relative constr-bg-color">
+    <div class="container">
+        <div class="row section-separator">
+
+          <div class="section-header-2">
+            <h4>Нам доверяют партнеры, для которых мы выпускаем радиаторы.</h4>
+        </div>
+        <div class="section-description">
+       RUTERM is the leader in the market of steel panel radiators in the Russian Federation,<br> CIS countries and Europe, and has a well-developed distribution in this area. 
+     </div>
+
+     <div class="clearfix"></div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section-top res-branch constr-bg-color services">
+
+    <div class="section-header-1">
+        <h4>Ruterm core principles</h4>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div class="single-service">
+
+                    <div class="icon-container">
+                        <div class="icon hvr-ripple-out">
+                            <i class="icon-briefcase"></i>
+                        </div>
+                    </div>
+
+                    <h5 class="section-title">Professionalism</h5>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="single-service">
+                    <div class="icon-container">
+                        <div class="icon hvr-ripple-out">
+                            <i class="icon-genius"></i>
+                        </div>
+                    </div>
+                    <h5 class="section-title">Quality</h5>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="single-service">
+
+                    <div class="icon-container">
+                        <div class="icon hvr-ripple-out">
+                            <i class="icon-trophy"></i>
+                        </div>
+                    </div>
+                    <h5 class="section-title">Leadership</h5>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="" style="padding-bottom: 50px;">
+    <div class="tab-content">
+    <div class="nopadding intr-srv-desc container">
+        <div class="row">
+            <div class=" col-md-6">
+                <div class="fit-img index-pic-1">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="arch-srv-heading right" style="padding-left: 10px; padding-right: 10px;">SIDE-MOUNTED RADIATORS</div>
+                <div class="arch-srv-subhead right" style="padding-bottom: 50px;">RUTERM COMPACT</div>
+                <div class="as-index-products right">
+                    <p>
+                        RUTERM produces steel panel radiators with side connection according to proprietary quality standards in a full range of standard sizes.
+                    </p>    
+                    <p >
+                        This allows you to complete a residential building or an administrative building with products under one brand.
+                    </p>
+                </div>    
+                <div align="left">
+                    <button class="btn hvr-bounce-to-right" data-style="expand-left"><a href="{% url 'en_show_category' cpu_slug='radiatory-s-bokovym-podkliucheniem' %}">Details</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="arch-srv-block-1">
+            <div class="col-md-6">
+                <div class="arch-srv-heading" style="padding-left: 10px; padding-right: 10px;">BOTTOM-MOUNTED RADIATORS</div>
+                <div class="arch-srv-subhead" style="padding-bottom: 50px;">RUTERM VENTIL COMPACT</div>
+                    <div class="as-index-products">
+                        <p>
+                           RUTERM produces steel panel radiators with bottom connection in all sizes. This allows you to easily develop a heating scheme for rooms with non-standard interior solutions.
+                        </p>
+                    </div>
+                    <div align="right">
+                        <button  class="btn hvr-bounce-to-right" data-style="expand-left"><a href="{% url 'en_show_category' cpu_slug='radiatory-s-nizhnim-podkliucheniem' %}">Details</a></button>
+                    </div>
+            </div>
+            <div class="col-md-6">
+                <div class= "fit-img index-pic-2">
+                </div>
+             </div>
+        </div>
+    </div>
+    </div>
+</div>
+<section class="mt-50 services const-service constr-bg-color-2" id="services">
+
+    <div class="">
+
+        <div class="row no-gutter">
+
+            <div class="col-md-4">
+                <div class="avatar"> <div class="const-img-border-small-fix"></div><img src="{% static 'images/construct/index_pic_3.jpg' %}" alt="" class="fit-img"> </div>
+            </div>
+            <div class="col-md-8">
+                <div class="const-srv-title">
+                    Our advantages:
+
+                </div>
+                <div class="const-srv">
+                    <div class="col-md-6">
+
+                        <div class="consult-item consult-cover  text-left m-b-30">
+                            <div class="icon">
+                                <i class="icon-hotairballoon"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Full production cycle</h4>
+                            </div>
+                            <div class="desc">
+                                Automated production lines
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="consult-item consult-cover  text-left m-b-30">
+                            <div class="icon">
+                                <i class=" icon-lightbulb"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Modern European equipment</h4>
+                            </div>
+                            <div class="desc">
+                                - Innovative aerodynamic grille increases convection by 4% and heat dissipation by 2%<br>
+                                - High efficiency - up to 75%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="consult-item consult-cover  text-left m-b-30">
+                            <div class="icon">
+                                <i class="icon-global"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Modern European equipment</h4>
+                            </div>
+                            <div class="desc">
+                                ISO 9001:2015 quality management system
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="consult-item consult-cover  text-left m-b-30">
+                            <div class="icon">
+                                <i class=" icon-aperture"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Warranty up to 10 years</h4>
+                            </div>
+                            <div class="desc">
+                                The warranty period of operation of radiators is up to 10 years
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>    
 
 {% endblock %}

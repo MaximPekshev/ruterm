@@ -28,28 +28,47 @@ Documents | RUTERM
 {% endblock %}
 
 {% block content %}
-<section class="section-top construct-project" id="portfolio">
-	<div class=" nopadding">
+<div class="section-top construct-project" id="portfolio" style="padding-bottom: 80px;">
+
+	<div class="container fluid nopadding">
 		<div class="row">
 			<div class="section-header-1">
 				<h4>Download documents</h4>
 			</div>
 			<div class="col-md-12">
+				<ul class="pf-filter">
+
+					<li class="btn-lines" data-filter="*">All documents
+					</li>
+					<li class="btn-lines" data-filter=".certificate">Certificates
+					</li>
+					<li class="btn-lines" data-filter=".passport">Specification
+					</li>
+				</ul>
 				<div id="even-grid">
 					<div class="isotope">
-						<div class="grids-item item nopadding branding web-solution">
+						<div class="nopadding grids-item item photo certificate">
 							<img class="grid-item"  src="{% static 'images/cert_preview.jpg' %}" alt="portfolio">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title">Ruterm certificate</div><br>
-									<a class="lightbox" data-lightbox-gallery="gallery1" target="_blank" href="{% static 'files/Ruterm_certificate.pdf' %}"> <i class="icon-magnifying-glass"></i> </a>
+									<a class="lightbox" target="_blank" data-lightbox-gallery="gallery1" href="{% static 'files/Ruterm_certificate.pdf' %}"> <i class="icon-magnifying-glass"></i> </a>
 								</div>
 							</div>
 						</div>
-					</div> 
+						<div class="nopadding grids-item item photo passport">
+							<img class="grid-item"  src="{% static 'images/passport_preview.jpg' %}" alt="portfolio">
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<div class="port-title">Technical certificate</div><br>
+									<a class="lightbox" target="_blank" data-lightbox-gallery="gallery1" href="{% static 'files/technical_passport_Ruterm.pdf' %}"> <i class="icon-magnifying-glass"></i> </a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div> 
+		</div>
 	</div>
-</section>
+</div>
 {% endblock %}
