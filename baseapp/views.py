@@ -61,7 +61,7 @@ def send_contact_form(request):
 		'message' : message,
 		'contact_form':contactForm,
  	}
-	return redirect('show_contacts', message)
+	return redirect('show_contacts')
 
 def send_mail(name, email, comment):
 
