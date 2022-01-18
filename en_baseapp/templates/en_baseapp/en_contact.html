@@ -117,31 +117,25 @@ Contacts | RUTERM
 
 				<div class="col-md-12">
 
-					<form class="contact-form" method="POST" action="">
+					<form id="en_contactForm" class="contact-form" method="POST" action="{% url 'en_send_contact_form' %}">
 						{% csrf_token %}
-						<h4 class="success">
-							<i class="icon_check"></i> Your message has been sent successfully.
-						</h4>
-
-						<h4 class="error">
-							<i class="icon_error-circle"></i> Please enter a valid email and message must be longer than 1 character.
-						</h4>
-
 						<div class="col-md-6">
-							<input class="form-control input-box" id="name" type="text" name="name" placeholder="Your Name">
+							{{ contact_form.contactName }}
 						</div>
 
 						<div class="col-md-6">
-							<input class="form-control input-box" id="email" type="email" name="email" placeholder="Your Email">
+							{{ contact_form.contactEmail }}
 						</div>
 
 						<div class="col-md-12">
-							<input class="form-control input-box" id="subject" type="text" name="subject" placeholder="Subject">
-							<textarea class="form-control textarea-box" id="message" rows="8" placeholder="Message"></textarea>
+							{{ contact_form.contactComment }}
 						</div>
-
-						<button class="btn hvr-bounce-to-right" data-style="expand-left">Send Message</button>
-
+						{{ contact_form.captcha }}
+						{% for message in messages %}
+						<p  style="color: red" class="text-uppercase" >* {{ message }} </p>
+						{% endfor %}
+						<button form="en_contactForm" type="submit" class="btn hvr-bounce-to-right">Send message</button>
+						
 					</form>
 
 				</div>
