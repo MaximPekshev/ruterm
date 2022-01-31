@@ -40,6 +40,8 @@ Documents | RUTERM
 
 					<li class="btn-lines" data-filter="*">All documents
 					</li>
+					<li class="btn-lines" data-filter=".catalog">Catalog
+					</li>
 					<li class="btn-lines" data-filter=".certificate">Certificates
 					</li>
 					<li class="btn-lines" data-filter=".passport">Specification
@@ -50,7 +52,7 @@ Documents | RUTERM
 				<div id="even-grid">
 					<div class="isotope">
 						<div class="nopadding grids-item item photo certificate">
-							<img class="grid-item"  src="{% static 'images/cert_preview.jpg' %}" alt="portfolio">
+							<img class="grid-item"  src="{% static 'images/cert_preview.jpg' %}" alt="Ruterm certificate">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title">Ruterm certificate</div><br>
@@ -58,8 +60,17 @@ Documents | RUTERM
 								</div>
 							</div>
 						</div>
+						<div class="nopadding grids-item item photo catalog">
+							<img class="grid-item"  src="{% static 'images/catalog_preview.jpg' %}" alt="Catalog">
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<div class="port-title">Catalog</div><br>
+									<a class="lightbox" target="_blank" data-lightbox-gallery="gallery1" href="{% static 'files/ruterm_catalog.pdf' %}"> <i class="icon-magnifying-glass"></i> </a>
+								</div>
+							</div>
+						</div>
 						<div class="nopadding grids-item item photo passport">
-							<img class="grid-item"  src="{% static 'images/passport_preview.jpg' %}" alt="portfolio">
+							<img class="grid-item"  src="{% static 'images/passport_preview.jpg' %}" alt="Technical certificate">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title">Technical certificate</div><br>
@@ -68,7 +79,7 @@ Documents | RUTERM
 							</div>
 						</div>
 						<div class="nopadding grids-item item photo work_seq">
-							<img class="grid-item"  src="{% static 'images/vedomost_preview.jpg' %}" alt="portfolio">
+							<img class="grid-item"  src="{% static 'images/vedomost_preview.jpg' %}" alt="Occupational safety - consolidated statement">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title">Occupational safety - consolidated statement</div><br>
@@ -77,7 +88,7 @@ Documents | RUTERM
 							</div>
 						</div>
 						<div class="nopadding grids-item item photo work_seq">
-							<img class="grid-item"  src="{% static 'images/recommended_activities_preview.jpg' %}" alt="portfolio">
+							<img class="grid-item"  src="{% static 'images/recommended_activities_preview.jpg' %}" alt="Occupational safety - list of recommended activities">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title" >Occupational safety - list of recommended activities</div><br>

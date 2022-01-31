@@ -40,6 +40,8 @@
 
 					<li class="btn-lines" data-filter="*">Все документы
 					</li>
+					<li class="btn-lines" data-filter=".catalog">Каталог
+					</li>
 					<li class="btn-lines" data-filter=".certificate">Сертификаты
 					</li>
 					<li class="btn-lines" data-filter=".passport">Паспорт
@@ -50,7 +52,7 @@
 				<div id="even-grid">
 					<div class="isotope">
 						<div class="nopadding grids-item item photo certificate">
-							<img class="grid-item"  src="{% static 'images/cert_preview.jpg' %}" alt="portfolio">
+							<img class="grid-item"  src="{% static 'images/cert_preview.jpg' %}" alt="Сертификат Рутерм">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title">Сертификат Ruterm</div><br>
@@ -58,8 +60,17 @@
 								</div>
 							</div>
 						</div>
+						<div class="nopadding grids-item item photo catalog">
+							<img class="grid-item"  src="{% static 'images/catalog_preview.jpg' %}" alt="Каталог продукции">
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<div class="port-title">Каталог</div><br>
+									<a class="lightbox" target="_blank" data-lightbox-gallery="gallery1" href="{% static 'files/ruterm_catalog.pdf' %}"> <i class="icon-magnifying-glass"></i> </a>
+								</div>
+							</div>
+						</div>
 						<div class="nopadding grids-item item photo passport">
-							<img class="grid-item"  src="{% static 'images/passport_preview.jpg' %}" alt="portfolio">
+							<img class="grid-item"  src="{% static 'images/passport_preview.jpg' %}" alt="Технический паспорт">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title">Технический паспорт</div><br>
@@ -68,7 +79,7 @@
 							</div>
 						</div>
 						<div class="nopadding grids-item item photo work_seq">
-							<img class="grid-item"  src="{% static 'images/vedomost_preview.jpg' %}" alt="portfolio">
+							<img class="grid-item"  src="{% static 'images/vedomost_preview.jpg' %}" alt="Охрана труда - сводная ведомость">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title">Охрана труда - сводная ведомость</div><br>
@@ -77,7 +88,7 @@
 							</div>
 						</div>
 						<div class="nopadding grids-item item photo work_seq">
-							<img class="grid-item"  src="{% static 'images/recommended_activities_preview.jpg' %}" alt="portfolio">
+							<img class="grid-item"  src="{% static 'images/recommended_activities_preview.jpg' %}" alt="Охрана труда - перечень рекомендуемых мероприятий">
 							<div class="portfolio-hover">
 								<div class="action-btn">
 									<div class="port-title" >Охрана труда - перечень рекомендуемых мероприятий</div><br>
